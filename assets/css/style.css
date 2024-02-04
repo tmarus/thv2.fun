@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Poppins:wght@600&display=swap');
+
+::-webkit-scrollbar {
+    background-color: #161616;
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0px #1a1a1a;
+    border-radius: 0px;
+}
+::-webkit-scrollbar-thumb {    
+    background: linear-gradient(to bottom, rgb(209, 206, 206), rgb(228, 226, 226));
+    border-radius: 20px;
+}
+
+body{
+    background-image: linear-gradient(45deg, #141414 25%, #0f0f0f 25%, #0f0f0f 50%, #141414 50%, #141414 75%, #0f0f0f 75%, #0f0f0f 100%);
+    background-size: 56.57px 56.57px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 86vh;
+}
+
+.welcome h1 {
+    font-size: 6vw;
+    transition: all ease 1s;
+}
+
+
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    transition: all ease 0.5s;
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ddd;
+}
+
+.about {
+    padding: 160px 20px; 
+    text-align: center; 
+}
+
+.about h1 {
+    font-size: 54px; 
+    margin-bottom: 10px; 
+    transition: all ease 0.5s;
+}
+
+.photo {
+    display: flex;
+    justify-content: center; 
+    margin-top: 90px; 
+    transition: color 0.3s ease;
+}
+
+.photo img {
+    width: 320px; 
+    height: auto; 
+    margin: 0 50px;
+    border: white 5px solid; 
+    transition: all ease 0.5s;
+    border-radius: 10px;
+}
+
+.one {
+    transform: perspective(1000px) rotateY(20deg); 
+    
+}
+
+.two {
+    transform: perspective(1000px) rotateY(7deg); 
+}
+
+.three {
+    transform: perspective(1000px) rotateY(-7deg); 
+}
+
+.four {
+    transform: perspective(1000px) rotateY(-20deg); 
+}
+
+.one:hover, .two:hover, .three:hover, .four:hover {
+    transform: perspective(500px) rotateY(0deg); 
+    transform: perspective(200px) rotatex(2deg); 
+}
+
+.contact {
+    width: 80%; 
+    max-width: 800px; 
+    height: 600px; 
+    background-color: #0f0f0f; 
+    margin-top: 150px; 
+    margin-bottom: 150px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center;
+    border-radius: 20px;
+    border: 3px solid white;
+}
+
+.contact img{
+    width: 100%; 
+    max-width: 800px; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.incontact {
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.incontact img {
+    width: 200px;
+    margin: 10px;
+    margin-top: 70px;
+    border-radius: 20px;
+    transition: transform 0.5s ease;
+}
+
+.incontact img:hover {
+    transform: perspective(200px) rotatex(10deg); 
+}
+
+
+@media only screen and (max-width: 768px) {
+    .welcome h1 {
+        font-size: 20vw;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar h1 {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+    .navbar a {
+        margin: 10px 10px;
+    }
+
+    .about h1 {
+        font-size: 36px;
+    }
+
+    .photo {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .photo img {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .photo img.one, .photo img.two, .photo img.three, .photo img.four {
+        transform: none;
+    }
+
+    .photo img:hover {
+        transform: none;
+    }
+    .incontact img{
+        width: 100px;
+        height: 100px;
+    }
+}
